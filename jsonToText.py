@@ -2,7 +2,7 @@
 import json
 
 # open the json file
-file = open('jsonformatter.txt')
+file = open('jsonLarge.json')
 
 # read the json file
 data = json.load(file)
@@ -16,13 +16,12 @@ print(data)
     # write the key to a TXT file
     # read the corresponding value
     # write the value next to the key in the TXT file
+text_file = open("king","w")
 
-jsonData = data["emp_details"]
-for x in jsonData:
-    keys = x.keys()
-    print(keys)
-    values = x.values()
-    print(values)
+for x in data:
+    n = text_file.write(x + " " + data[x] + f"\n" )
 
 
 # save the TXT file
+
+text_file.close()
